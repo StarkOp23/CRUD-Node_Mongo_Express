@@ -26,7 +26,7 @@ let getSingleTeacher = async (req, res, next) => {
 
     let singleTeacher = await Teacher.findOne({ name: tid })
     if (!singleTeacher) {
-        return res.status(200).json({ error: true, data: singleTeacher, message: 'No teacher found On Given Data', data: null })
+        return res.status(400).json({ error: true, data: singleTeacher, message: 'No teacher found On Given Data', data: null })
 
     }
 
